@@ -3,73 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Casa Sabor | Authentic Latin Cuisine</title>
+  <title>Casa Sabor | Latin Cuisine</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fff8f0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
       color: #333;
     }
 
-    header {
-      background-color: #a83232;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
-
-    nav {
+    .hero {
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=80') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      background-color: #d9534f;
-    }
-
-    nav a {
+      align-items: center;
       color: white;
-      padding: 15px 25px;
-      text-decoration: none;
-      font-weight: bold;
+      text-align: center;
+      padding: 0 20px;
     }
 
-    nav a:hover {
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+    .cta-button {
+      background-color: #d9534f;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
       background-color: #c9302c;
     }
 
-    .hero {
-      background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092'); /* Placeholder image */
-      background-size: cover;
-      background-position: center;
-      height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-      font-size: 2.5em;
-      font-weight: bold;
+    .section {
+      padding: 60px 20px;
       text-align: center;
     }
 
-    .content {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .content h2 {
+    .section h2 {
       color: #a83232;
       margin-bottom: 20px;
     }
 
-    .content img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-
-    .section {
-      margin-bottom: 60px;
+    .section p {
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     footer {
@@ -78,54 +73,37 @@
       text-align: center;
       padding: 30px;
     }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      .hero p {
+        font-size: 1em;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Casa Sabor</h1>
-    <p>Authentic Latin cuisine made with love and heritage</p>
-  </header>
-
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Menu</a>
-    <a href="#">About Us</a>
-    <a href="#">Contact</a>
-  </nav>
-
   <section class="hero">
-    <div>Vibrant Flavors, Warm Ambience</div>
+    <h1>Casa Sabor</h1>
+    <p>Authentic Latin cuisine made with love and heritage. Discover bold flavors and warm hospitality in every bite.</p>
+    <button class="cta-button">Explore Our Menu</button>
   </section>
 
-  <section class="content">
-    <div class="section">
-      <h2>Our Story</h2>
-      <p>Born from the heart of Costa Rica, Casa Sabor celebrates culinary traditions with modern flair. Each dish is thoughtfully prepared to transport your senses and tell the story of Latin America’s rich flavors.</p>
-      <img src="https://images.unsplash.com/photo-1555992336-cbf8e8e68d56" alt="Interior of restaurant">
-    </div>
+  <section class="section">
+    <h2>Why Choose Us?</h2>
+    <p>We blend tradition and innovation to create unforgettable dining experiences. Locally sourced ingredients, vibrant dishes, and a welcoming atmosphere await you.</p>
+  </section>
 
-    <div class="section">
-      <h2>Customer Favorites</h2>
-      <p>Whether you're craving a smoky carne asada or a refreshing ceviche, our menu is bursting with color and taste. We source local ingredients to ensure every bite is unforgettable.</p>
-      <img src="https://images.unsplash.com/photo-1604908177523-4419e83f5fb6" alt="Delicious plated food">
-    </div>
-
-    <div class="section">
-      <h2>Visit Us</h2>
-      <p>Located in the heart of San José. Cozy, family-friendly, and full of life—just like the food. We can't wait to welcome you!</p>
-      <img src="https://images.unsplash.com/photo-1543352634-6e4f315c7dbd" alt="Restaurant exterior">
-    </div>
+  <section class="section">
+    <h2>Visit Us</h2>
+    <p>Located in the heart of San José, Costa Rica. Open daily from 11am to 10pm. Come hungry, leave happy!</p>
   </section>
 
   <footer>
-    &copy; 2025 Casa Sabor | Designed with passion and precision
+    &copy; 2025 Casa Sabor | All rights reserved
   </footer>
-
-  <script>
-    // Optional interactive script
-    document.querySelector('.hero').addEventListener('click', () => {
-      alert('Explore our menu and discover your favorite dish!');
-    });
-  </script>
 </body>
 </html>
