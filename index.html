@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Casa Sabor</title>
+  <title>Encuentra tu sabor</title>
   <style>
     html, body {
       margin: 0;
@@ -11,12 +11,16 @@
       height: 100%;
       overflow: hidden;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
     }
 
-    .container {
+    .split-screen {
+      display: flex;
+      width: 100%;
       height: 100vh;
-      background: linear-gradient(to bottom right, #d9534f, #a83232);
+    }
+
+    .restaurant {
+      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -24,15 +28,22 @@
       color: white;
       text-align: center;
       padding: 20px;
+      background-size: cover;
+      background-position: center;
     }
 
-    .logo {
-      width: 120px;
-      height: 120px;
-      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=600&q=80') no-repeat center center;
-      background-size: cover;
-      border-radius: 50%;
-      margin-bottom: 30px;
+    .left {
+      background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80');
+    }
+
+    .right {
+      background-image: url('https://images.unsplash.com/photo-1604908177523-4419e83f5fb6?auto=format&fit=crop&w=800&q=80');
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 10px;
     }
 
     h1 {
@@ -41,16 +52,15 @@
     }
 
     p {
-      font-size: 1.2em;
-      max-width: 500px;
-      margin-bottom: 30px;
+      font-size: 1.1em;
+      margin-bottom: 25px;
     }
 
     .cta-button {
       background-color: white;
       color: #a83232;
       border: none;
-      padding: 15px 30px;
+      padding: 12px 25px;
       font-size: 1em;
       border-radius: 5px;
       cursor: pointer;
@@ -62,27 +72,33 @@
     }
 
     @media (max-width: 768px) {
+      .split-screen {
+        flex-direction: column;
+      }
+
       h1 {
         font-size: 2em;
-      }
-
-      p {
-        font-size: 1em;
-      }
-
-      .logo {
-        width: 100px;
-        height: 100px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo"></div>
-    <h1>Casa Sabor</h1>
-    <p>Auténtica cocina latina. Participa, descubre y saborea la experiencia.</p>
-    <button class="cta-button">Ver el Menú</button>
+  <div class="split-screen">
+    <div class="restaurant left">
+      <div class="overlay">
+        <h1>Casa Sabor</h1>
+        <p>Sabores latinos auténticos y cálidos</p>
+        <button class="cta-button">Encuesta</button>
+      </div>
+    </div>
+
+    <div class="restaurant right">
+      <div class="overlay">
+        <h1>Fuego Grill</h1>
+        <p>Carne asada al estilo moderno</p>
+        <button class="cta-button">Encuesta</button>
+      </div>
+    </div>
   </div>
 </body>
 </html>
